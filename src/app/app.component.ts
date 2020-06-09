@@ -11,6 +11,7 @@ export class AppComponent {
   tekstWZmiennej = "Tekst w zmiennej!"
 
   cars = [ 'Audi', 'BMW', 'Mitsubishi', 'Ford', 'Seat', 'Mazda', 'Mercedes-Benz' ]
+  
   osoby = [ 'Kasia', 'Basia', 'Zosia', 'Tomek', 'Marek', 'Antek' ];
 
 }

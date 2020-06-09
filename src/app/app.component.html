@@ -1,31 +1,34 @@
-<div class="flex-container">
-  <div>
-    <app-child1>
-      Wprowadzony tekst dzięki ng-content,<br>
-      między znaczniki componentu wyswietlanego<br>
-      {{ tekstWZmiennej }}<br>
-      <app-child2></app-child2>
-    </app-child1>
-  </div>
+<div class="container">
+  <div class="row">
+  
+    <div class="col">
+      <app-child1>
+        Wprowadzony tekst dzięki ng-content,<br>
+        między znaczniki componentu wyswietlanego<br>
+        {{ tekstWZmiennej }}<br>
+        <app-child2></app-child2>
+      </app-child1>
+    </div>
 
-  <div>
-    <app-child-cars>
-      <ul *ngFor="let car of cars">
-        <li>{{ car }}</li>
-      </ul>
-    </app-child-cars>
-  </div>
+    <div class="col">
+      <app-child-cars>
+        <ul *ngFor="let car of cars">
+          <li>{{ car }}</li>
+        </ul>
+      </app-child-cars>
+    </div>
 
-  <div>
-    <h1>Laboratorium Angular</h1>
-    <div class="main-content">
-      <div>
-        <app-wybierz-osobe [osoby]="osoby"></app-wybierz-osobe>
-      </div>
-      <div>
-        <app-wyswietl-osobe></app-wyswietl-osobe>
+    <div class="col">
+      <h1>Laboratorium Angular</h1>
+      <div class="main-content">
+        <div>
+          <app-wybierz-osobe [osoby]="osoby"></app-wybierz-osobe>
+        </div>
+        <div>
+          <app-wyswietl-osobe></app-wyswietl-osobe>
+        </div>
       </div>
     </div>
-  </div>
 
+  </div>
 </div>

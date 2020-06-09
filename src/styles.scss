@@ -29,14 +29,10 @@ li {
     padding: 8px;
 }
 
-.flex-container {
-    display: flex;
-}
-
-.flex-container > div {
-    margin: 8px;
-    padding: 8px;
+.col {
+    margin: 4px;
+    padding: 12px;
     border: 2px solid #e43f5a;
-    border-radius: 20px;
+    border-radius: 12px;
     background-color: #1b1b2f;
 }

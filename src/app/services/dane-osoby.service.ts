@@ -34,7 +34,7 @@ export class DaneOsobyService {
   }
   reset() {
     this.osoby = []
-    this.listaOsob.next(this.osoby);
+    this.listaOsob.next([]);
   }
 
 }

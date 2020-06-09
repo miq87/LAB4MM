@@ -8,22 +8,21 @@ import { DaneOsobyService } from './services/dane-osoby.service';
 })
 export class AppComponent {
 
+  title = 'LAB4MM'
+  
+  tekstWZmiennej = "Tekst w zmiennej!"
+
+  cars = [ 'Audi', 'BMW', 'Mitsubishi', 'Ford', 'Seat', 'Mazda', 'Mercedes-Benz' ]
+
   osoby: string[] = [ 'Kasia', 'Basia', 'Zosia', 'Tomek', 'Marek', 'Antek' ]
 
   constructor(private daneOsobyService: DaneOsobyService) {}
 
   ngOnInit() {
-    this.daneOsobyService.dajOsoby().subscribe(
+    /*this.daneOsobyService.dajOsoby().subscribe(
       osoby => {
         this.osoby.push(osoby[1])
-      })
+      })*/
   }
-
-  title = 'LAB4MM';
-
-  tekstWZmiennej = "Tekst w zmiennej!"
-
-  cars = [ 'Audi', 'BMW', 'Mitsubishi', 'Ford', 'Seat', 'Mazda', 'Mercedes-Benz' ]
-  
 
 }

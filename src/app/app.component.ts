@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'LAB4MM';
+
+  tekstWZmiennej = "Tekst w zmiennej!"
+
+  cars = [ 'Audi', 'BMW', 'Mitsubishi', 'Ford', 'Seat', 'Mazda', 'Mercedes-Benz' ]
+  osoby = [ 'Kasia', 'Basia', 'Zosia', 'Tomek', 'Marek', 'Antek' ];
+
 }

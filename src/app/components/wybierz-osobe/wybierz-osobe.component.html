@@ -1,0 +1,12 @@
+<div>
+    <h3>Wybierz osobę</h3>
+    <ul *ngIf="osoby">
+        <li *ngFor="let osoba of osoby">
+            <span>{{ osoba }} - </span>
+            <div class="btn-group" role="group" aria-label="Operacje">
+                <button class="btn btn-success btn-sm" (click)="onClick(osoba)">Wybierz</button>
+                <button class="btn btn-warning btn-sm" (click)="onRemove(osoba)">Usuń</button>
+            </div>
+        </li>
+    </ul>
+</div>

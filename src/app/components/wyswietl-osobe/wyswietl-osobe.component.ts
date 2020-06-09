@@ -19,5 +19,11 @@ export class WyswietlOsobeComponent implements OnInit {
   onReset() {
     this.daneOsobyService.reset()
   }
+  /// ZADANIE 3 start
+  onRemove(osoba: string) {
+    console.log('Usuwam osobę: ' + osoba)
+    this.daneOsobyService.usunOsobe(osoba);
+  }
+  /// ZADANIE 3 end
 
 }

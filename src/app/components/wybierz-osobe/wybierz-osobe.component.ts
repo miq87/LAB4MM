@@ -18,6 +18,7 @@ export class WybierzOsobeComponent implements OnInit {
   onClick(osoba: string) {
     console.log('Dodaje osobę: ', osoba);
     this.daneOsobyService.dodajOsobe(osoba);
+    this.osoby.splice(this.osoby.indexOf(osoba), 1)
   }
   /// ZADANIE 3 start
   onRemove(osoba: string) {

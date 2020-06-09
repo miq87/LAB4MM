@@ -8,7 +8,7 @@ export class DaneOsobyService {
 
   private listaOsob = new Subject<string[]>();
   private osoby: string[] = [];
-  constructor() { }
+  constructor() {}
 
   dodajOsobe(osoba: string) {
     if (!this.osoby.includes(osoba)) {
@@ -16,6 +16,12 @@ export class DaneOsobyService {
     }
     this.listaOsob.next(this.osoby)
   }
+  // ZADANIE 2 - start
+  odrzucOsobe(osoba: string) {
+    this.osoby.splice(this.osoby.indexOf(osoba), 1)
+    this.listaOsob.next(this.osoby)
+  }
+  // ZADANIE 2 - end
   // ZADANIE 3 - start
   usunOsobe(osoba: string) {
     this.osoby.splice(this.osoby.indexOf(osoba), 1)
@@ -26,7 +32,6 @@ export class DaneOsobyService {
   dajOsoby(): Observable<string[]> {
     return this.listaOsob.asObservable()
   }
-
   reset() {
     this.osoby = []
     this.listaOsob.next(this.osoby);

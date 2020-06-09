@@ -1,7 +1,11 @@
 <h3>Wyświetl osoby:</h3>
 <ul *ngIf="osoby?.length > 0">
     <li *ngFor="let osoba of osoby">
-        <span>{{ osoba }} </span><button class="btn btn-warning btn-sm" (click)="onRemove(osoba)">Usuń</button>
+        <span>{{ osoba }} </span>
+        <div class="btn-group" role="group" aria-label="Operacje">
+            <button class="btn btn-danger btn-sm" (click)="onRemove(osoba)">Usuń</button>
+            <button class="btn btn-warning btn-sm">Odrzuć</button>
+        </div>
     </li>
 </ul>
 <br>

@@ -13,8 +13,8 @@ export class WybierzOsobeComponent implements OnInit {
   constructor(private daneOsobyService: DaneOsobyService) { }
 
   ngOnInit(): void {
-    this.daneOsobyService.dodajOsobeWybierz(this.osoby)
-    this.daneOsobyService.dajOsobeWybierz().subscribe(osoby => {
+    this.daneOsobyService.dodajOsobyWybierz(this.osoby)
+    this.daneOsobyService.dajOsobyWybierz().subscribe(osoby => {
       this.osoby = osoby
     })
   }

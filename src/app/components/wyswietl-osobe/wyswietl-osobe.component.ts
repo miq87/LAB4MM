@@ -12,12 +12,12 @@ export class WyswietlOsobeComponent implements OnInit {
   constructor(private daneOsobyService: DaneOsobyService) { }
   
   ngOnInit() {
-    this.daneOsobyService.dajOsoby().subscribe(
+    this.daneOsobyService.dajOsobyWyswietl().subscribe(
       osoby => this.osoby = osoby)
   }
   
   onReset() {
-    this.daneOsobyService.reset()
+    this.daneOsobyService.resetWyswietl()
   }
   // ZADANIE 2 start
   onDiscard(osoba: string) {

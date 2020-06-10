@@ -13,11 +13,11 @@ export class DaneOsobyService {
   
   constructor() {}
 
-  dodajOsobeWybierz(osoby: string[]) {
+  dodajOsobyWybierz(osoby: string[]) {
     this.osobyWybierz = osoby
     this.listaWybierz.next(osoby)
   }
-  dajOsobeWybierz(): Observable<string[]> {
+  dajOsobyWybierz(): Observable<string[]> {
     return this.listaWybierz.asObservable()
   }
   dodajOsobeWyswietl(osoba: string) {
@@ -45,10 +45,10 @@ export class DaneOsobyService {
   }
   // ZADANIE 3 - end
 
-  dajOsoby(): Observable<string[]> {
+  dajOsobyWyswietl(): Observable<string[]> {
     return this.listaWyswietl.asObservable()
   }
-  reset() {
+  resetWyswietl() {
     this.osobyWyswietl = []
     this.listaWyswietl.next(this.osobyWyswietl);
   }

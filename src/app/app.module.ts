@@ -10,7 +10,6 @@ import { ChildCarsComponent } from './components/child-cars/child-cars.component
 import { WybierzOsobeComponent } from './components/wybierz-osobe/wybierz-osobe.component';
 import { WyswietlOsobeComponent } from './components/wyswietl-osobe/wyswietl-osobe.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

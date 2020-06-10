@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 import { PostClass } from '../post-class';
-import { Comments } from '../interfaces/comments';
+import { CommentClass } from '../comment-class';
 
 
 @Injectable({
@@ -27,16 +27,16 @@ export class JsonService {
     const url = `https://jsonplaceholder.typicode.com/${name}`;
     return this.http.get<PostClass[]>(url, { params: param });
   }
-  // ZADANIE 2 - start
-  getByPostId(name: string, id: number): Observable<Comments[]> {
+  // HTTP - ZADANIE 2 - start
+  getByPostId(name: string, id: number): Observable<CommentClass[]> {
     const param = new HttpParams().set('postId', id.toString())
     const url = `https://jsonplaceholder.typicode.com/${name}`;
-    return this.http.get<Comments[]>(url, { params: param });
+    return this.http.get<CommentClass[]>(url, { params: param });
   }
-  getObject2(name: string, id: number): Observable<Comments[]> {
-    const url = `https://jsonplaceholder.typicode.com/${name}/${id}`;
-    return this.http.get<Comments[]>(url);
+  getObject2(name: string, id: number): Observable<CommentClass[]> {
+    const url = `https://jsonplaceholder.typicode.com/${name}/${id}/comments`;
+    return this.http.get<CommentClass[]>(url);
   }
-  // ZADANIE 2 - end
+  // HTTP - ZADANIE 2 - end
 
 }

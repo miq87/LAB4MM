@@ -19,10 +19,6 @@ export class AppComponent {
   constructor(private daneOsobyService: DaneOsobyService) {}
 
   ngOnInit() {
-    /*this.daneOsobyService.dajOsoby().subscribe(
-      osoby => {
-        this.osoby.push(osoby[1])
-      })*/
   }
 
 }

@@ -3,8 +3,8 @@
     <li *ngFor="let osoba of osoby">
         <span>{{ osoba }} </span>
         <div class="btn-group" role="group" aria-label="Operacje">
-            <button class="btn btn-danger btn-sm" (click)="onRemove(osoba)">Usuń</button>
             <button class="btn btn-warning btn-sm" (click)="onDiscard(osoba)">Odrzuć</button>
+            <button class="btn btn-danger btn-sm" (click)="onRemove(osoba)">Usuń</button>
         </div>
     </li>
 </ul>

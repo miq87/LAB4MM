@@ -20,12 +20,14 @@
 
     <div class="col">
       <h1>Laboratorium Angular</h1>
-      <div class="main-content">
-        <div>
-          <app-wybierz-osobe [osoby]="osoby"></app-wybierz-osobe>
-        </div>
-        <div>
-          <app-wyswietl-osobe></app-wyswietl-osobe>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col noborder">
+            <app-wybierz-osobe [osoby]="osoby"></app-wybierz-osobe>
+          </div>
+          <div class="col noborder">
+            <app-wyswietl-osobe></app-wyswietl-osobe>
+          </div>
         </div>
       </div>
     </div>

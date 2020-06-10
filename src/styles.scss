@@ -14,25 +14,22 @@ hr {
 	border: 1px solid #1f4068;
 }
 
-li {
-    padding: 2px;
-    margin: 2px;
-    line-height: normal;
-}
-
-.main-content {
-    display: flex;
-}
-
-.main-content > div {
-    margin: 8px;
-    padding: 8px;
-}
-
 .col {
     margin: 4px;
     padding: 12px;
     border: 2px solid #e43f5a;
     border-radius: 12px;
     background-color: #1b1b2f;
+}
+
+.col ul {
+    margin: 0px; padding: 0px; padding-left: 12px;
+}
+
+.col li {
+    margin: 0px; padding: 0px; line-height: normal;
+}
+
+.noborder {
+    border: 0px
 }

@@ -22,14 +22,14 @@ export class WyswietlOsobeComponent implements OnInit {
   // ZADANIE 2 start
   onDiscard(osoba: string) {
     console.log('Odrzucam osobę: ' + osoba)
-    this.daneOsobyService.odrzucOsobe(osoba)
+    this.daneOsobyService.odrzucOsobeWyswietl(osoba)
   }
   // ZADANIE 2 end
   //
   // ZADANIE 3 start
   onRemove(osoba: string) {
     console.log('Usuwam osobę: ' + osoba)
-    this.daneOsobyService.usunOsobe(osoba)
+    this.daneOsobyService.usunOsobeWyswietl(osoba)
   }
   // ZADANIE 3 end
 

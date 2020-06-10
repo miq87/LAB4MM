@@ -6,35 +6,51 @@ import { Subject, Observable } from 'rxjs';
 })
 export class DaneOsobyService {
 
-  private listaOsob = new Subject<string[]>();
-  private osoby: string[] = [];
+  private listaWybierz = new Subject<string[]>()
+  private listaWyswietl = new Subject<string[]>()
+  private osobyWybierz: string[] = []
+  private osobyWyswietl: string[] = []
+  
   constructor() {}
 
-  dodajOsobe(osoba: string) {
-    if (!this.osoby.includes(osoba)) {
-      this.osoby.push(osoba)
+  dodajOsobeWybierz(osoby: string[]) {
+    this.osobyWybierz = osoby
+    this.listaWybierz.next(osoby)
+  }
+  dajOsobeWybierz(): Observable<string[]> {
+    return this.listaWybierz.asObservable()
+  }
+  dodajOsobeWyswietl(osoba: string) {
+    if (!this.osobyWyswietl.includes(osoba)) {
+      this.osobyWyswietl.push(osoba)
     }
-    this.listaOsob.next(this.osoby)
+    this.listaWyswietl.next(this.osobyWyswietl)
   }
   // ZADANIE 2 - start
-  odrzucOsobe(osoba: string) {
-    this.osoby.splice(this.osoby.indexOf(osoba), 1)
-    this.listaOsob.next(this.osoby)
+  odrzucOsobeWyswietl(osoba: string) {
+    this.osobyWyswietl.splice(this.osobyWyswietl.indexOf(osoba), 1)
+    this.listaWyswietl.next(this.osobyWyswietl)
+    this.osobyWybierz.push(osoba)
+    this.listaWybierz.next(this.osobyWybierz)
   }
   // ZADANIE 2 - end
   // ZADANIE 3 - start
-  usunOsobe(osoba: string) {
-    this.osoby.splice(this.osoby.indexOf(osoba), 1)
-    this.listaOsob.next(this.osoby)
+  usunOsobeWybierz(osoba: string) {
+    this.osobyWybierz.splice(this.osobyWybierz.indexOf(osoba), 1)
+    this.listaWybierz.next(this.osobyWybierz)
+  }
+  usunOsobeWyswietl(osoba: string) {
+    this.osobyWyswietl.splice(this.osobyWyswietl.indexOf(osoba), 1)
+    this.listaWyswietl.next(this.osobyWyswietl)
   }
   // ZADANIE 3 - end
 
   dajOsoby(): Observable<string[]> {
-    return this.listaOsob.asObservable()
+    return this.listaWyswietl.asObservable()
   }
   reset() {
-    this.osoby = []
-    this.listaOsob.next([]);
+    this.osobyWyswietl = []
+    this.listaWyswietl.next(this.osobyWyswietl);
   }
 
 }

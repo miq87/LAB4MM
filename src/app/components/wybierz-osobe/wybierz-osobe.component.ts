@@ -13,17 +13,20 @@ export class WybierzOsobeComponent implements OnInit {
   constructor(private daneOsobyService: DaneOsobyService) { }
 
   ngOnInit(): void {
+    this.daneOsobyService.dodajOsobeWybierz(this.osoby)
+    this.daneOsobyService.dajOsobeWybierz().subscribe(osoby => {
+      this.osoby = osoby
+    })
   }
-
-  onClick(osoba: string) {
+  onAdd(osoba: string) {
     console.log('Dodaje osobę: ', osoba);
-    this.daneOsobyService.dodajOsobe(osoba);
+    this.daneOsobyService.dodajOsobeWyswietl(osoba);
     this.osoby.splice(this.osoby.indexOf(osoba), 1)
   }
   /// ZADANIE 3 start
   onRemove(osoba: string) {
     console.log('Usuwam osobę: ' + osoba)
-    this.daneOsobyService.usunOsobe(osoba);
+    this.daneOsobyService.usunOsobeWybierz(osoba)
   }
   /// ZADANIE 3 end
 

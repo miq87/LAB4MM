@@ -55,6 +55,5 @@ export class AppComponent {
       console.log(err)
     })
     // HTTP - ZADANIE 2 - end
-
   }
 }
